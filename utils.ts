@@ -684,7 +684,7 @@ export class Seed {
 			multiAsset.insert(scriptHash, asset);
 		}
 		assets.set_multiasset(multiAsset);
-		let min = min_ada_required(assets, BigNum.from_str(config.protocols.minUTxOValue.toString()));
+		let min = min_ada_required(assets, BigNum.from_str(config.protocolParams.minUTxOValue.toString()));
 		return Number.parseInt(min.to_str());
 	}
 
